@@ -1,0 +1,567 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-size: 16px;
+    font-family: 'MADE Mirage';
+    background-color: rgb(22, 101, 146);
+}
+
+/* Config Bootstrap */
+.container-fluid {
+    padding: 0 !important;
+}
+.row {
+    margin: 0 !important;
+}
+section.header div a p {
+    font-size: 1.5em;
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    font-size: 0.7em;
+    background-color: #fff;
+    top: 0;
+    position: sticky !important;
+    z-index: 50000;
+
+}
+.header nav.navbar {
+    padding: 8px 1rem !important;
+}
+.header .area-distribuidor{
+    font-size: 0.8em;
+    display: flex;
+    justify-content: space-around;
+    background-color: black;
+    color: #fff;
+}
+.area-distribuidor a {
+    text-decoration: none;
+    color: white;
+}
+.area-distribuidor a:hover {
+    color: orange;
+}
+.area-distribuidor a p {
+    font-size: 1em;
+    padding: 8px 0px;
+    margin-bottom: 0;
+}
+.header nav.navbar menu {
+    margin: 0 0 0 5px;
+}
+.header nav.navbar menu a {
+    padding: 8px;
+}
+.header div:last-child {
+    flex-direction: row-reverse;
+}
+.animacao-mouse:hover {
+    background-color: rgb(243, 243, 243);
+    border-radius: 10%;
+    border-bottom: 1px solid black;
+}
+/* Fim Config Header */
+
+main {
+    background-color: rgb(22, 101, 146);
+}
+#imagem-inicio {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    z-index: 1;
+    background: #fff url('imagens/imagem-inicio.png') no-repeat top center;
+    background-size: 100%;
+    width: 100%;
+    height: 86vh;
+}
+@keyframes borda {
+    0% {
+        border-left: 2px solid #fff;
+    }
+    50% {
+        border-left: 2px solid #fff;
+        border-top: 2px solid #fff;
+    }
+    100% {  
+        border-left: 2px solid #fff;
+        border-top: 2px solid #fff;      
+        border-right: 2px solid #fff;
+    }
+}
+.vantagens {
+    display: flex;
+    z-index: 2;
+    background-color: rgb(22, 101, 146);
+    width: auto;
+    padding: 10px 4%;
+    border-top-left-radius: 30px 30px;
+    border-top-right-radius: 30px 30px;
+    transition: padding 1s;
+    animation-name: borda;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+.vantagens:hover {
+    padding: 12px 8%;
+    animation-name: borda;
+    animation-iteration-count: infinite;
+}
+.vantagens h2 {
+    padding: 8px 0 0 0;
+    font-size: 0.8em;
+    color: #fff;
+    cursor: pointer;
+    text-align: center;
+}
+.cor-fundo-vantagens {
+    z-index: 3;
+    position: absolute;
+    background-color: rgb(22, 101, 146);
+    width: 100%;
+    height: 10px;
+}
+/* *************************** */ 
+#mostrar {
+    flex-wrap: wrap;
+    justify-content: center;
+}
+#mostrar #imagem {
+    margin: 0 auto;
+    position: relative;
+}
+.alinhamento-imagem-parte-1 img {
+    border-radius: 10px;
+    padding: 20px;
+    margin: 0 5px;
+    border: 1px solid transparent;
+    transition: border 0.35s ease-in-out;
+    width: auto;
+}
+.alinhamento-imagem-parte-1 img:hover {
+    border: 1px solid #fff;
+    margin: 2px;
+}
+.alinhamento-paragrafo{
+    color: #fff;
+    width: 150px;
+}
+#vantagens-cadastrar div h5 {
+    color: #fff;
+}
+#vantagens-cadastrar div a{
+    color: rgb(22, 101, 146);
+}
+#vantagens-cadastrar div button {
+    padding: 20px 15%;
+    border-radius: 25px;
+    border: transparent;
+    color: rgb(22, 101, 146);
+    background-color: #fff;
+    font-weight: bold;
+}
+/* ********************************** */
+#depoimentos {
+    margin-top: 0.7%;
+}
+#fundo {
+    z-index: 3;
+    position: absolute;
+    background-color:rgb(228, 227, 227);
+    width: 100%;
+    height: 10px;
+}
+#depoimentos div.vantagens{
+    background-color: rgb(228, 227, 227);
+    width: max-content;
+    text-align: center;
+    margin: 0 auto;
+}
+#depoimentos div.vantagens a {
+    color: #000;
+}
+#depoimentos-inicio {
+    background: #fff url('imagens/branco_logo_dir.png') repeat top center;
+    background-size: 100%;
+}
+.conteudo-depoimento {
+    justify-content: center;
+}
+#palavras-diretoria .conteudo-depoimento p{
+    font-size: 0.7em;
+}
+.editar-titulo-depoimento{
+    border-radius: 30px;
+    align-items: center !important;
+}
+.distribuidores {
+    padding: 15px;
+    display: flex;
+    margin: 0.8% 3% !important;
+    justify-content: center;
+}
+.distribuidores p {
+    padding: 5px 0;
+    display: flex;
+    margin: 0.8% 3%;
+    align-items: center;
+    justify-content: flex-start;
+}
+.distribuidores h4 {
+    margin: 5px 0;
+    text-align: start;
+    font-size: 1.2em;
+    margin-left: 10px;
+}
+.espacamento-depoimento {
+    text-align: start;
+}
+.distribuidores img {
+    border-radius: 30px;
+    padding: 10px;
+}
+.cor-background-azul {
+    background-color: rgb(22, 101, 146);
+    color: #fff;
+    border-radius: 35px;
+}
+.cor-background-laranja {
+    background-color: rgb(224, 121, 76);
+    color: #fff;
+    border-radius: 35px;
+}
+.cor-background-preto {
+    background-color: rgb(3, 5, 8);
+    color: #fff;
+    border-radius: 35px;
+}
+div.botao-depoimento {
+    padding: 10px 12px;
+    border-radius: 35px;
+    border: 1px solid black;
+    transition: border 0.5s;
+}
+button.botao-depoimento {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+div.botao-depoimento:hover {
+    border: 1px solid rgb(224, 121, 76);
+}
+/* ************************************** */
+div#fundo-diretor {
+    background-color: rgb(22, 101, 146) !important;
+    background-image: url('imagens/fundo-diretor.png');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+a#cor-link-diretor, #cadastro button a {
+    color: #fff !important;
+}
+#palavras-diretoria {
+    position: relative;
+    background: rgb(22,101,146) url('imagens/fundo-diretor.png') center bottom;
+    background-size: 100%;
+    background-repeat: repeat-y;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    color: #fff;
+    font-size: 1.4em;
+}
+#palavras-diretoria iframe {
+    border: 1px solid rgb(22,101,146);
+    box-shadow: 15px 10px 40px rgb(22,101,146);
+}
+#cadastro {
+    width: 100%;
+    margin: 5% auto;
+    text-align: center;
+}
+#cadastro button {
+    padding: 2% 20%;
+    background-color: rgb(224, 121, 76);
+    color: #fff;
+    border: none;
+    border-radius: 30px;
+    transition: box-shadow 1s linear;
+}
+#cadastro button:hover {
+    box-shadow: 5px 5px 20px rgb(224, 121, 76);
+}
+/* ********************************* */
+#position-teconilogia {
+    position: absolute;
+    bottom: 0;
+}
+#tecnologia {
+    width: max-content;
+    margin: 0 auto;
+    background-color: rgb(224, 121, 76);
+}
+#info-tecno {
+    width: 100%;
+    position: relative;
+}
+.container1 {
+    margin: 0 auto;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    position: relative;
+    background-color: rgb(224, 121, 76);
+}
+.esquerdo,.direito {
+    background-size: 100%;
+    margin: 0 auto 4%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    flex-wrap: nowrap;
+}
+.direito #somente-celular {
+    visibility: hidden;
+}
+.direito a {
+    color: #fff;
+}
+.esquerdo button,.direito button {
+    position: absolute;
+    margin-bottom: 10px;
+    background-color: transparent;
+    color: #fff;
+    padding: 2% 5%;
+    border: 1px solid #fff;
+    border-radius: 30px;
+    cursor: pointer;
+}
+/* ************************* */
+#duvida {
+    position: absolute;
+    bottom: 0;
+}
+#container-duvida {
+    width: max-content;
+    margin: 0 auto;
+    background: rgb(22, 101, 146) url('imagens/fundo-diretor.png') no-repeat center;
+}
+#duvidas-container {
+    position: relative;
+    background: rgb(0, 28, 44) url('imagens/fundo-diretor.png') top center;
+    background-repeat: repeat-y;
+    background-size: 100%; 
+}
+.altura-duvida {
+    height: max-content;
+    margin: 15% auto;
+}
+#duvidas-container div button {
+    background-color: transparent;
+    border: 1px solid #fff;
+    padding: 15px 20px;
+    border-radius: 30px;
+    cursor: pointer;
+    margin: 1%;
+    color: #fff;
+}
+#duvidas-container div.col-10 button {
+    width: 80%;
+
+}
+#duvidas-container div ol, #duvidas-container div p {
+    text-align: justify;
+    padding: 0 12px;
+    margin: 0 20px;
+}
+.borda-duvida {
+    width: auto;
+    border: 1px solid #fff;
+    background-color: transparent;
+    border-top-right-radius: 30px 30px;
+    border-bottom-right-radius: 30px 30px;
+    border-bottom-left-radius: 30px 30px;
+    white-space: pre-line;
+    margin: 10px 0 10px 15%;
+    height: 250px;
+    align-items: center;
+    color: #fff;
+}
+#duvidas-container button:hover, #duvidas-container button:active {
+    background-color: #fff;
+    color: rgb(22, 101, 146);
+}
+/* *********************************** */
+#inicio-produtos {
+    position: absolute;
+    bottom: 0;
+}
+#container-produtos {
+    width: max-content;
+    margin: 0 auto;
+    background: #000 url('imagens/fundo-preto.png') repeat-y top center;
+    background-size: 100%;
+    margin-top: 2% 0; 
+}
+#catalogo-produtos {
+    width: 100%;
+    text-align: center;
+    background: #000 url('imagens/fundo-preto.png') repeat-y top center;
+    background-size: 100%;
+    color: #fff;
+    height: 100vh;
+}
+#catalogo-produtos div.distribuidores {
+    margin: 0 auto !important;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+}
+.margem-produtos {
+    margin: 3% 0;
+}
+.catalogo-esquerdo {
+    width: 20%;
+    text-align: start;
+}
+.catalogo-direito {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 50%;
+    border-left: 1px solid #fff;
+}
+.filho-direito h4 {
+    padding: 0 2%;
+    text-align: end;
+    font-size: 2em;
+}
+#imagem-catalogo {
+    width: 100%;
+}
+#link-download {
+    padding: 10px 20px;
+    background-color: transparent;
+    color: #fff;
+    border: 1px solid #fff;
+    border-radius: 30px;
+    transition: padding 0.6s ease-in-out;
+}
+#link-download a {
+    color: #fff;
+}
+#link-download:hover {
+    padding: 12px 30px;
+}
+footer {
+    text-align: center;
+    background-color: rgb(224, 121, 76);
+    color: #fff;
+    padding: 5px;
+    height: max-content;
+}
+footer h5 {
+    font-size: 1em;
+}
+
+/*
+// Dispositivos extra small (telefones em modo retrato, com menos de 576px)
+@media (max-width: 575.98px) { ... }*/
+
+/* Dispositivos small (telefones em modo paisagem, com menos de 768px)*/
+
+
+/* Dispositivos médios (tablets com menos de 992px) */
+@media (max-width: 1000px) {
+    #imagem-inicio {
+        height: 500px;
+    }
+}
+@media (max-width: 767.98px) {
+    html, body {
+        overflow-x: hidden;
+    }
+    #imagem-inicio {
+        height: 250px;
+    }
+    .distribuidores {
+        flex-direction: column;
+        padding: 0;
+        margin: 0 0 25px 0 !important;
+    }
+    .distribuidores p {
+        padding: 5px;
+    }
+    .distribuidores img {
+        padding: 30px;
+    }
+    #palavras-diretoria .conteudo-depoimento{
+        font-size: 0.5em;
+        width: 100%;
+        height: max-content;
+    }
+    .conteudo-depoimento {
+        flex-direction: column;
+        width: 90%;
+        margin: 0 auto !important;
+    }
+    #primeiro-para-diretoria {
+        margin-top: 20px;
+    }
+    .container1 {
+        flex-direction: column;
+        padding-bottom: 15%;
+    }
+    #depoimentos-inicio div h2 {
+        font-size: 1.3em;
+        text-align: center;
+        padding: 10px 0;
+    }
+    #catalogo-produtos {
+        height: auto;
+    }
+    .catalogo-esquerdo {
+        width: 100%;
+    }
+    .catalogo-direito {
+        width: 100%;
+        flex-direction: column;
+    }
+    .esquerdo, .direito {
+        width: 100%;
+        margin: auto;
+        align-items: center;
+    }
+    #somente-celular {
+        visibility: visible !important;
+    }
+    #depoimentos img.img-fluid {
+        width: 80% !important;
+    }
+    #link-download {
+        margin-bottom: 25px;
+    }
+    footer h5 {
+        font-size: 0.6em;
+    }
+    .filho-direito h4 {
+        text-align: start;
+    }
+    .alinhamento-imagem-parte-1 picture {
+        margin: 0 auto;
+    }
+    .alinhamento-imagem-parte-1 img {
+        margin: 0 auto;
+        width: 150px;
+        height: 150px;
+        border: 1px solid #fff;
+    }
+}
